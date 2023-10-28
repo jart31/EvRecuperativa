@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/cafe', [ProductController::class, 'cafe'])->middleware(['auth', 'verified'])->name('cafe');
+Route::get('/pasteleria', [ProductController::class, 'pasteleria'])->middleware(['auth', 'verified'])->name('pasteleria');
+Route::get('/sandwich', [ProductController::class, 'sandwich'])->middleware(['auth', 'verified'])->name('sandwich');
