@@ -21,18 +21,18 @@
     $links2= [
         [
             'name' => 'Home',
-            'url' => route('dashboard'),
-            'active' => request()->routeIs('dashboard')
+            'url' => route('welcome'),
+            'active' => request()->routeIs('welcome')
             ],
             [
             'name' => 'Vision',
-            'url' => route('dashboard'),
-            'active' => request()->routeIs('dashboard')
+            'url' => route('vision'),
+            'active' => request()->routeIs('vision')
             ],
             [
             'name' => 'Mision',
-            'url' => route('dashboard'),
-            'active' => request()->routeIs('dashboard')
+            'url' => route('mision'),
+            'active' => request()->routeIs('mision')
             ]
     ];
 @endphp

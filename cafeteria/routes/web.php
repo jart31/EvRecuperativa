@@ -35,3 +35,15 @@ require __DIR__.'/auth.php';
 Route::get('/cafe', [ProductController::class, 'cafe'])->middleware(['auth', 'verified'])->name('cafe');
 Route::get('/pasteleria', [ProductController::class, 'pasteleria'])->middleware(['auth', 'verified'])->name('pasteleria');
 Route::get('/sandwich', [ProductController::class, 'sandwich'])->middleware(['auth', 'verified'])->name('sandwich');
+
+Route::get('/vision', function () {
+    return view('vision');
+})->name('vision');
+
+Route::get('/mision', function () {
+    return view('mision');
+})->name('mision');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
